@@ -1,19 +1,15 @@
-Craigslist-Pricing-Project
-==========================
+# Boston Craigslist Housing
 
-1. Enter directory that you want to store the scraper and then in CMD enter: 
+To output listings to a file called `output.csv`, run the following from the root directory of the repository:
 
-      scrapy startproject tutorial
+`scrapy runspider --output=output.csv -t csv craigslist/spiders/CraigSpyder.py`
 
-2. Change base url to specific craigslist apartment link e.g. http://sfbay.craigslist.org/search/apa for San Francisco
+(command for Windows)
 
-3. To run the scraper type in the directory: 
+Too many requests will result in your IP being blocked.
 
-    scrapy crawl craig -o items.csv -t csv
+## Requirements
+* `scrapy`
+* Python 3
 
-For more in-depth to customize, here's the blog post:
-
-https://racketracer.wordpress.com/2015/01/29/practical-scraping-using-scrapy/
-
-Replace the pipelines.py file with an empty file if you don't want to store the data in a postgresql database. 
-
+[Code for Boston](http://www.codeforboston.org/)
